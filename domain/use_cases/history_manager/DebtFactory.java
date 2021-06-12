@@ -18,7 +18,7 @@ public abstract class DebtFactory {
 
     public DebtFactory(HistoryInterface repository, DebtRequest request) {
         this.repository = repository;
-        this.id = UUID.randomUUID().toString();
+        this.setId(UUID.randomUUID().toString());
         this.setAccountID(request.getAccountID());
         this.setUserID(request.getUserID());
         this.setCommit(request.getCommit());

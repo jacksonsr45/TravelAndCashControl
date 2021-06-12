@@ -18,7 +18,7 @@ public abstract class CreditFactory {
 
     public CreditFactory(HistoryInterface repository, CreditRequest request) {
         this.repository = repository;
-        this.id = UUID.randomUUID().toString();
+        this.setId(UUID.randomUUID().toString());
         this.setAccountID(request.getAccountID());
         this.setUserID(request.getUserID());
         this.setCommit(request.getCommit());
