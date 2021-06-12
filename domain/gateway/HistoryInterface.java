@@ -3,14 +3,16 @@ package domain.gateway;
 import domain.entity.HistoryEntity;
 import domain.responses.HistoryResponse;
 
+import java.util.ArrayList;
+
 public interface HistoryInterface {
-    public HistoryResponse credit(HistoryEntity entity);
+    HistoryResponse credit(HistoryEntity entity);
 
-    public HistoryResponse debt(HistoryEntity entity);
+    HistoryResponse debt(HistoryEntity entity);
 
-    public HistoryResponse showHistory(String id);
+    HistoryResponse showHistory(String id);
 
-    public HistoryResponse listHistory();
+    ArrayList<HistoryResponse> listHistory();
 
-    public HistoryResponse deleteHistory(String id);
+    Boolean deleteHistory(String id);
 }

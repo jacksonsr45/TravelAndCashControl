@@ -11,8 +11,6 @@ public class HistoryEntity {
     public Double credit;
     public Double debt;
 
-    public HistoryEntity() { }
-
     public HistoryEntity(String id, String accountID, String userID, String commit, Date date, Double credit, Double debt) {
         this.id = id;
         this.accountID = accountID;

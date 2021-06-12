@@ -20,4 +20,19 @@ public class HistoryManager extends HistoryFactory {
     public Debt debt(DebtRequest request) {
         return new Debt(this.repository, request);
     }
+
+    @Override
+    public List list() {
+        return new List(this.repository);
+    }
+
+    @Override
+    public Show show(String id) {
+        return new Show(this.repository, id);
+    }
+
+    @Override
+    public Delete delete(String id) {
+        return new Delete(this.repository, id);
+    }
 }

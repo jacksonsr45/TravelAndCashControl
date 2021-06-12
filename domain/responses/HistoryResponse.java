@@ -10,4 +10,5 @@ public class HistoryResponse {
     public Date date;
     public Double credit;
     public Double debt;
+    public Double total;
 }
