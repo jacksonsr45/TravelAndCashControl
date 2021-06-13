@@ -7,6 +7,7 @@ import domain.requests.AddUserRequest;
 import domain.requests.UpdateProfileRequest;
 import domain.requests.UpdateUserRequest;
 import domain.use_cases.user_manager.profile.AddProfile;
+import domain.use_cases.user_manager.profile.ShowProfile;
 import domain.use_cases.user_manager.profile.UpdateProfile;
 import domain.use_cases.user_manager.user.*;
 
@@ -60,5 +61,10 @@ public class UserManager extends UserManagerFactory {
     @Override
     public UpdateProfile updateProfile(UpdateProfileRequest request) {
         return new UpdateProfile(this.profileRepository, request);
+    }
+
+    @Override
+    public ShowProfile showProfile(String userID) {
+        return new ShowProfile(this.profileRepository, userID);
     }
 }
