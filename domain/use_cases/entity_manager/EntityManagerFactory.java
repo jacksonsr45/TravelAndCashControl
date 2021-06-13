@@ -12,4 +12,6 @@ public abstract class EntityManagerFactory {
     public abstract ListEntity listEntity(String userID);
 
     public abstract ShowEntity showEntity(String id);
+
+    public abstract DeleteEntity deleteEntity(String id);
 }

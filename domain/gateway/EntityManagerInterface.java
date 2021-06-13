@@ -13,4 +13,6 @@ public interface EntityManagerInterface {
     ArrayList<EntityManagerResponse> listEntity(String userID);
 
     EntityManagerResponse showEntity(String id);
+
+    Boolean deleteEntity(String id);
 }

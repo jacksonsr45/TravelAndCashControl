@@ -30,4 +30,9 @@ public class EntityManager extends EntityManagerFactory {
     public ShowEntity showEntity(String id) {
         return new ShowEntity(this.repository, id);
     }
+
+    @Override
+    public DeleteEntity deleteEntity(String id) {
+        return new DeleteEntity(this.repository, id);
+    }
 }
