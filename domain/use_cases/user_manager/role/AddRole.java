@@ -1,12 +1,12 @@
 package domain.use_cases.user_manager.role;
 
 import domain.entity.AuthEntity;
-import domain.gateway.AuthInterface;
+import domain.gateway.RoleInterface;
 import domain.presenter.AuthPresenterInterface;
 import domain.requests.AddAuthRequest;
 
 public class AddRole extends AddRoleFactory {
-    public AddRole(AuthInterface repository, AddAuthRequest request) {
+    public AddRole(RoleInterface repository, AddAuthRequest request) {
         super(repository, request);
     }
 

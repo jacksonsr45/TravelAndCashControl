@@ -1,6 +1,6 @@
 package domain.use_cases.user_manager;
 
-import domain.gateway.AuthInterface;
+import domain.gateway.RoleInterface;
 import domain.gateway.ProfileInterface;
 import domain.gateway.UserAddressInterface;
 import domain.gateway.UserInterface;
@@ -47,31 +47,31 @@ public class UserManager extends UserManagerFactory {
         super(userRepository, profileRepository, addressRepository);
     }
 
-    public UserManager(AuthInterface authRepository) {
+    public UserManager(RoleInterface authRepository) {
         super(authRepository);
     }
 
-    public UserManager(ProfileInterface profileRepository, AuthInterface authRepository) {
+    public UserManager(ProfileInterface profileRepository, RoleInterface authRepository) {
         super(profileRepository, authRepository);
     }
 
-    public UserManager(UserInterface userRepository, AuthInterface authRepository) {
+    public UserManager(UserInterface userRepository, RoleInterface authRepository) {
         super(userRepository, authRepository);
     }
 
-    public UserManager(UserInterface userRepository, ProfileInterface profileRepository, AuthInterface authRepository) {
+    public UserManager(UserInterface userRepository, ProfileInterface profileRepository, RoleInterface authRepository) {
         super(userRepository, profileRepository, authRepository);
     }
 
-    public UserManager(UserInterface userRepository, UserAddressInterface addressRepository, AuthInterface authRepository) {
+    public UserManager(UserInterface userRepository, UserAddressInterface addressRepository, RoleInterface authRepository) {
         super(userRepository, addressRepository, authRepository);
     }
 
-    public UserManager(ProfileInterface profileRepository, UserAddressInterface addressRepository, AuthInterface authRepository) {
+    public UserManager(ProfileInterface profileRepository, UserAddressInterface addressRepository, RoleInterface authRepository) {
         super(profileRepository, addressRepository, authRepository);
     }
 
-    public UserManager(UserInterface userRepository, ProfileInterface profileRepository, UserAddressInterface addressRepository, AuthInterface authRepository) {
+    public UserManager(UserInterface userRepository, ProfileInterface profileRepository, UserAddressInterface addressRepository, RoleInterface authRepository) {
         super(userRepository, profileRepository, addressRepository, authRepository);
     }
 

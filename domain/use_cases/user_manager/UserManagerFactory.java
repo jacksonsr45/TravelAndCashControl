@@ -1,6 +1,6 @@
 package domain.use_cases.user_manager;
 
-import domain.gateway.AuthInterface;
+import domain.gateway.RoleInterface;
 import domain.gateway.ProfileInterface;
 import domain.gateway.UserAddressInterface;
 import domain.gateway.UserInterface;
@@ -21,7 +21,7 @@ public abstract class UserManagerFactory {
     protected UserInterface userRepository;
     protected ProfileInterface profileRepository;
     protected UserAddressInterface addressRepository;
-    protected AuthInterface authRepository;
+    protected RoleInterface authRepository;
 
     public UserManagerFactory(UserInterface userRepository) {
         this.userRepository = userRepository;
@@ -56,39 +56,39 @@ public abstract class UserManagerFactory {
         this.addressRepository = addressRepository;
     }
 
-    public UserManagerFactory(AuthInterface authRepository) {
+    public UserManagerFactory(RoleInterface authRepository) {
         this.authRepository = authRepository;
     }
 
-    public UserManagerFactory(ProfileInterface profileRepository, AuthInterface authRepository) {
+    public UserManagerFactory(ProfileInterface profileRepository, RoleInterface authRepository) {
         this.profileRepository = profileRepository;
         this.authRepository = authRepository;
     }
 
-    public UserManagerFactory(UserInterface userRepository, AuthInterface authRepository) {
+    public UserManagerFactory(UserInterface userRepository, RoleInterface authRepository) {
         this.userRepository = userRepository;
         this.authRepository = authRepository;
     }
 
-    public UserManagerFactory(UserInterface userRepository, ProfileInterface profileRepository, AuthInterface authRepository) {
+    public UserManagerFactory(UserInterface userRepository, ProfileInterface profileRepository, RoleInterface authRepository) {
         this.userRepository = userRepository;
         this.profileRepository = profileRepository;
         this.authRepository = authRepository;
     }
 
-    public UserManagerFactory(UserInterface userRepository, UserAddressInterface addressRepository, AuthInterface authRepository) {
+    public UserManagerFactory(UserInterface userRepository, UserAddressInterface addressRepository, RoleInterface authRepository) {
         this.userRepository = userRepository;
         this.addressRepository = addressRepository;
         this.authRepository = authRepository;
     }
 
-    public UserManagerFactory(ProfileInterface profileRepository, UserAddressInterface addressRepository, AuthInterface authRepository) {
+    public UserManagerFactory(ProfileInterface profileRepository, UserAddressInterface addressRepository, RoleInterface authRepository) {
         this.profileRepository = profileRepository;
         this.addressRepository = addressRepository;
         this.authRepository = authRepository;
     }
 
-    public UserManagerFactory(UserInterface userRepository, ProfileInterface profileRepository, UserAddressInterface addressRepository, AuthInterface authRepository) {
+    public UserManagerFactory(UserInterface userRepository, ProfileInterface profileRepository, UserAddressInterface addressRepository, RoleInterface authRepository) {
         this.userRepository = userRepository;
         this.profileRepository = profileRepository;
         this.addressRepository = addressRepository;
