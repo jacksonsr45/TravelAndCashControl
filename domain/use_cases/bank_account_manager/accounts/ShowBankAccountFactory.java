@@ -1,13 +1,13 @@
-package domain.use_cases.bank_accounts;
+package domain.use_cases.bank_account_manager.accounts;
 
 import domain.gateway.BankAccountInterface;
 import domain.presenter.BankAccountPresenterInterface;
 
-public abstract class DeleteBankAccountFactory {
+public abstract class ShowBankAccountFactory {
     protected BankAccountInterface repository;
     private String id;
 
-    public DeleteBankAccountFactory(BankAccountInterface repository, String id) {
+    public ShowBankAccountFactory(BankAccountInterface repository, String id) {
         this.repository = repository;
         this.setId(id);
     }

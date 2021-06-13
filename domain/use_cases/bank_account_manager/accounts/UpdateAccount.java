@@ -1,4 +1,4 @@
-package domain.use_cases.bank_accounts;
+package domain.use_cases.bank_account_manager.accounts;
 
 import domain.entity.BankAccountEntity;
 import domain.gateway.BankAccountInterface;

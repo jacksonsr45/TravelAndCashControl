@@ -1,4 +1,4 @@
-package domain.use_cases.history_manager;
+package domain.use_cases.bank_account_manager.history;
 
 import domain.entity.HistoryEntity;
 import domain.gateway.HistoryInterface;

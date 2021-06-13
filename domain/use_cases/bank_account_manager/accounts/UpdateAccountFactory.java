@@ -1,12 +1,10 @@
-package domain.use_cases.bank_accounts;
+package domain.use_cases.bank_account_manager.accounts;
 
 import domain.gateway.BankAccountInterface;
 import domain.presenter.BankAccountPresenterInterface;
-import domain.requests.AddAccountRequest;
+import domain.requests.UpdateAccountRequest;
 
-import java.util.UUID;
-
-public abstract class AddAccountFactory {
+public abstract class UpdateAccountFactory {
     protected BankAccountInterface repository;
     private String id;
     private String entityID;
@@ -14,9 +12,9 @@ public abstract class AddAccountFactory {
     private String number;
     private String description;
 
-    public AddAccountFactory(BankAccountInterface repository, AddAccountRequest request) {
+    public UpdateAccountFactory(BankAccountInterface repository, UpdateAccountRequest request) {
         this.repository = repository;
-        this.setId(UUID.randomUUID().toString());
+        this.setId(request.getId());
         this.setBanking(request.getBanking());
         this.setNumber(request.getNumber());
         this.setDescription(request.getDescription());
