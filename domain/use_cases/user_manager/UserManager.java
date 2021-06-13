@@ -1,15 +1,23 @@
 package domain.use_cases.user_manager;
 
+import domain.gateway.ProfileInterface;
 import domain.gateway.UserInterface;
+import domain.requests.AddProfileRequest;
 import domain.requests.AddUserRequest;
 import domain.requests.UpdateUserRequest;
+import domain.use_cases.user_manager.profile.AddProfile;
 import domain.use_cases.user_manager.user.*;
 
 public class UserManager extends UserManagerFactory {
     private UserInterface userRepository;
+    private ProfileInterface profileRepository;
 
     public UserManager(UserInterface userRepository) {
         this.userRepository = userRepository;
+    }
+
+    public UserManager(ProfileInterface profileRepository) {
+        this.profileRepository = profileRepository;
     }
 
     @Override
@@ -35,5 +43,10 @@ public class UserManager extends UserManagerFactory {
     @Override
     public DeleteUser deleteUser(String id) {
         return new DeleteUser(this.userRepository, id);
+    }
+
+    @Override
+    public AddProfile addProfile(AddProfileRequest request) {
+        return new AddProfile(this.profileRepository, request);
     }
 }

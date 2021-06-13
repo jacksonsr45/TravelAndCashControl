@@ -1,7 +1,9 @@
 package domain.use_cases.user_manager;
 
+import domain.requests.AddProfileRequest;
 import domain.requests.AddUserRequest;
 import domain.requests.UpdateUserRequest;
+import domain.use_cases.user_manager.profile.AddProfile;
 import domain.use_cases.user_manager.user.*;
 
 public abstract class UserManagerFactory {
@@ -14,4 +16,6 @@ public abstract class UserManagerFactory {
     public abstract ShowUser showUser(String id);
 
     public abstract DeleteUser deleteUser(String id);
+
+    public abstract AddProfile addProfile(AddProfileRequest request);
 }
