@@ -136,12 +136,12 @@ public class UserManager extends UserManagerFactory {
     }
 
     @Override
-    public AddRole addAuth(AddAuthRequest request) {
+    public AddRole addAuth(AddRoleRequest request) {
         return new AddRole(this.authRepository, request);
     }
 
     @Override
-    public UpdateRole updateAuth(UpdateAuthRequest request) {
+    public UpdateRole updateAuth(UpdateRoleRequest request) {
         return new UpdateRole(this.authRepository, request);
     }
 

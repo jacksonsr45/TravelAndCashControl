@@ -1,12 +1,12 @@
 package domain.gateway;
 
-import domain.entity.AuthEntity;
-import domain.responses.AuthResponse;
+import domain.entity.RoleEntity;
+import domain.responses.RoleResponse;
 
 public interface RoleInterface {
-    Boolean addAuth(AuthEntity entity);
+    Boolean addAuth(RoleEntity entity);
 
-    Boolean updateAuth(AuthEntity entity);
+    Boolean updateAuth(RoleEntity entity);
 
-    AuthResponse showAuth(String userID, String objectiveID);
+    RoleResponse showAuth(String userID, String objectiveID);
 }

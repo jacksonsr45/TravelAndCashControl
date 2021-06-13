@@ -1,7 +1,7 @@
 package domain.use_cases.user_manager.role;
 
 import domain.gateway.RoleInterface;
-import domain.presenter.AuthPresenterInterface;
+import domain.presenter.RolePresenterInterface;
 
 public abstract class ShowRoleFactory {
     protected RoleInterface repository;
@@ -30,5 +30,5 @@ public abstract class ShowRoleFactory {
         this.objectiveID = objectiveID;
     }
 
-    public abstract void execute(AuthPresenterInterface presenter);
+    public abstract void execute(RolePresenterInterface presenter);
 }

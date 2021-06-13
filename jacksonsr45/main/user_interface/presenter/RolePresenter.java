@@ -1,11 +1,11 @@
 package jacksonsr45.main.user_interface.presenter;
 
-import domain.presenter.AuthPresenterInterface;
-import domain.responses.AuthResponse;
+import domain.presenter.RolePresenterInterface;
+import domain.responses.RoleResponse;
 
-public class AuthPresenter implements AuthPresenterInterface {
+public class RolePresenter implements RolePresenterInterface {
     private Boolean result;
-    private AuthResponse auth;
+    private RoleResponse auth;
 
     @Override
     public void present(Boolean result) {
@@ -13,7 +13,7 @@ public class AuthPresenter implements AuthPresenterInterface {
     }
 
     @Override
-    public void present(AuthResponse response) {
+    public void present(RoleResponse response) {
         this.auth = response;
     }
 
@@ -21,7 +21,7 @@ public class AuthPresenter implements AuthPresenterInterface {
         return result;
     }
 
-    public AuthResponse getAuth() {
+    public RoleResponse getAuth() {
         return auth;
     }
 }

@@ -1,22 +1,22 @@
 package jacksonsr45.main.infrastructure.repository;
 
-import domain.entity.AuthEntity;
+import domain.entity.RoleEntity;
 import domain.gateway.RoleInterface;
-import domain.responses.AuthResponse;
+import domain.responses.RoleResponse;
 
 public class RoleRepository implements RoleInterface {
     @Override
-    public Boolean addAuth(AuthEntity entity) {
+    public Boolean addAuth(RoleEntity entity) {
         return null;
     }
 
     @Override
-    public Boolean updateAuth(AuthEntity entity) {
+    public Boolean updateAuth(RoleEntity entity) {
         return null;
     }
 
     @Override
-    public AuthResponse showAuth(String userID, String objectiveID) {
+    public RoleResponse showAuth(String userID, String objectiveID) {
         return null;
     }
 }

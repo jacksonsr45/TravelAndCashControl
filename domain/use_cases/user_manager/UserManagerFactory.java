@@ -119,9 +119,9 @@ public abstract class UserManagerFactory {
 
     public abstract ShowAddress showAddress(String userID);
 
-    public abstract AddRole addAuth(AddAuthRequest request);
+    public abstract AddRole addAuth(AddRoleRequest request);
 
-    public abstract UpdateRole updateAuth(UpdateAuthRequest request);
+    public abstract UpdateRole updateAuth(UpdateRoleRequest request);
 
     public abstract ShowRole showAuth(String userID, String objectiveID);
 }

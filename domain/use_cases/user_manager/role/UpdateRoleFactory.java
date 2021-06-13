@@ -2,8 +2,8 @@ package domain.use_cases.user_manager.role;
 
 import domain._enum.Role;
 import domain.gateway.RoleInterface;
-import domain.presenter.AuthPresenterInterface;
-import domain.requests.UpdateAuthRequest;
+import domain.presenter.RolePresenterInterface;
+import domain.requests.UpdateRoleRequest;
 
 public abstract class UpdateRoleFactory {
     protected RoleInterface repository;
@@ -12,7 +12,7 @@ public abstract class UpdateRoleFactory {
     private String objectiveID;
     private Enum<Role> role;
 
-    public UpdateRoleFactory(RoleInterface repository, UpdateAuthRequest request) {
+    public UpdateRoleFactory(RoleInterface repository, UpdateRoleRequest request) {
         this.repository = repository;
         this.setId(request.getId());
         this.setUserID(request.getUserID());
@@ -52,5 +52,5 @@ public abstract class UpdateRoleFactory {
         this.role = role;
     }
 
-    public abstract void execute(AuthPresenterInterface presenter);
+    public abstract void execute(RolePresenterInterface presenter);
 }

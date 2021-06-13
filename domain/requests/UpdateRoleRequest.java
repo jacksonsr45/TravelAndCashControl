@@ -2,13 +2,13 @@ package domain.requests;
 
 import domain._enum.Role;
 
-public class UpdateAuthRequest {
+public class UpdateRoleRequest {
     private String id;
     private String userID;
     private String objectiveID;
     private Enum<Role> role;
 
-    public UpdateAuthRequest(String id, String userID, String objectiveID, Enum<Role> role) {
+    public UpdateRoleRequest(String id, String userID, String objectiveID, Enum<Role> role) {
         this.id = id;
         this.userID = userID;
         this.objectiveID = objectiveID;
