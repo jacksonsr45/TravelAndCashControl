@@ -1,11 +1,10 @@
 package domain.use_cases.user_manager;
 
 import domain.gateway.ProfileInterface;
+import domain.gateway.UserAddressInterface;
 import domain.gateway.UserInterface;
-import domain.requests.AddProfileRequest;
-import domain.requests.AddUserRequest;
-import domain.requests.UpdateProfileRequest;
-import domain.requests.UpdateUserRequest;
+import domain.requests.*;
+import domain.use_cases.user_manager.address.AddAddress;
 import domain.use_cases.user_manager.profile.AddProfile;
 import domain.use_cases.user_manager.profile.ListProfile;
 import domain.use_cases.user_manager.profile.ShowProfile;
@@ -15,6 +14,7 @@ import domain.use_cases.user_manager.user.*;
 public class UserManager extends UserManagerFactory {
     private UserInterface userRepository;
     private ProfileInterface profileRepository;
+    private UserAddressInterface addressRepository;
 
     public UserManager(UserInterface userRepository) {
         this.userRepository = userRepository;
@@ -27,6 +27,26 @@ public class UserManager extends UserManagerFactory {
     public UserManager(UserInterface userRepository, ProfileInterface profileRepository) {
         this.userRepository = userRepository;
         this.profileRepository = profileRepository;
+    }
+
+    public UserManager(UserAddressInterface addressRepository) {
+        this.addressRepository = addressRepository;
+    }
+
+    public UserManager(ProfileInterface profileRepository, UserAddressInterface addressRepository) {
+        this.profileRepository = profileRepository;
+        this.addressRepository = addressRepository;
+    }
+
+    public UserManager(UserInterface userRepository, UserAddressInterface addressRepository) {
+        this.userRepository = userRepository;
+        this.addressRepository = addressRepository;
+    }
+
+    public UserManager(UserInterface userRepository, ProfileInterface profileRepository, UserAddressInterface addressRepository) {
+        this.userRepository = userRepository;
+        this.profileRepository = profileRepository;
+        this.addressRepository = addressRepository;
     }
 
     @Override
@@ -72,5 +92,10 @@ public class UserManager extends UserManagerFactory {
     @Override
     public ListProfile listProfile() {
         return new ListProfile(this.profileRepository);
+    }
+
+    @Override
+    public AddAddress address(AddAddressRequest request) {
+        return new AddAddress(this.addressRepository, request);
     }
 }

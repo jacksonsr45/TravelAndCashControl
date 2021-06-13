@@ -1,9 +1,7 @@
 package domain.use_cases.user_manager;
 
-import domain.requests.AddProfileRequest;
-import domain.requests.AddUserRequest;
-import domain.requests.UpdateProfileRequest;
-import domain.requests.UpdateUserRequest;
+import domain.requests.*;
+import domain.use_cases.user_manager.address.AddAddress;
 import domain.use_cases.user_manager.profile.AddProfile;
 import domain.use_cases.user_manager.profile.ListProfile;
 import domain.use_cases.user_manager.profile.ShowProfile;
@@ -28,4 +26,6 @@ public abstract class UserManagerFactory {
     public abstract ShowProfile showProfile(String userID);
 
     public abstract ListProfile listProfile();
+
+    public abstract AddAddress address(AddAddressRequest request);
 }
