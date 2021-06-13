@@ -25,4 +25,9 @@ public class EntityManager extends EntityManagerFactory {
     public ListEntity listEntity(String userID) {
         return new ListEntity(this.repository, userID);
     }
+
+    @Override
+    public ShowEntity showEntity(String id) {
+        return new ShowEntity(this.repository, id);
+    }
 }

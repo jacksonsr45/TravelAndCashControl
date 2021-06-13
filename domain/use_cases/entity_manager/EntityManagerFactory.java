@@ -10,4 +10,6 @@ public abstract class EntityManagerFactory {
     public abstract UpdateEntity updateEntity(UpdateEntityRequest request);
 
     public abstract ListEntity listEntity(String userID);
+
+    public abstract ShowEntity showEntity(String id);
 }

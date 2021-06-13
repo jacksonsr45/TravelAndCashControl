@@ -11,4 +11,6 @@ public interface EntityManagerInterface {
     EntityManagerResponse updateEntity(EntityManagerEntity entity);
 
     ArrayList<EntityManagerResponse> listEntity(String userID);
+
+    EntityManagerResponse showEntity(String id);
 }
