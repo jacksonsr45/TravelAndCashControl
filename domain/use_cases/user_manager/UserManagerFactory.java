@@ -7,4 +7,6 @@ public abstract class UserManagerFactory {
     public abstract AddUser addUser(AddUserRequest request);
 
     public abstract UpdateUser updateUser(UpdateUserRequest request);
+
+    public abstract ListUser listUsers();
 }

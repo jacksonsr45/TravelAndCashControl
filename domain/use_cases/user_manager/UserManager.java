@@ -20,4 +20,9 @@ public class UserManager extends UserManagerFactory {
     public UpdateUser updateUser(UpdateUserRequest request) {
         return new UpdateUser(this.userRepository, request);
     }
+
+    @Override
+    public ListUser listUsers() {
+        return new ListUser(this.userRepository);
+    }
 }
