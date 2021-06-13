@@ -5,6 +5,7 @@ import domain.requests.AddUserRequest;
 import domain.requests.UpdateProfileRequest;
 import domain.requests.UpdateUserRequest;
 import domain.use_cases.user_manager.profile.AddProfile;
+import domain.use_cases.user_manager.profile.ListProfile;
 import domain.use_cases.user_manager.profile.ShowProfile;
 import domain.use_cases.user_manager.profile.UpdateProfile;
 import domain.use_cases.user_manager.user.*;
@@ -25,4 +26,6 @@ public abstract class UserManagerFactory {
     public abstract UpdateProfile updateProfile(UpdateProfileRequest request);
 
     public abstract ShowProfile showProfile(String userID);
+
+    public abstract ListProfile listProfile();
 }
