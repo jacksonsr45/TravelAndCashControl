@@ -1,12 +1,12 @@
-package domain.use_cases.user_manager;
+package domain.use_cases.user_manager.user;
 
 import domain.entity.UserEntity;
 import domain.gateway.UserInterface;
 import domain.presenter.UserPresenterInterface;
-import domain.requests.UpdateUserRequest;
+import domain.requests.AddUserRequest;
 
-public class UpdateUser extends UpdateUserFactory {
-    public UpdateUser(UserInterface repository, UpdateUserRequest request) {
+public class AddUser extends AddUserFactory {
+    public AddUser(UserInterface repository, AddUserRequest request) {
         super(repository, request);
     }
 
@@ -14,6 +14,6 @@ public class UpdateUser extends UpdateUserFactory {
     public void execute(UserPresenterInterface presenter) {
         UserEntity entity = new UserEntity(this.getId(), this.getUsername(),
                 this.getPassword(), this.getStatus());
-        presenter.present(this.repository.updateUser(entity));
+        presenter.present(this.repository.addUser(entity));
     }
 }

@@ -13,4 +13,6 @@ public interface UserInterface {
     ArrayList<UserResponse> listUsers();
 
     UserResponse showUser(String id);
+
+    Boolean deleteUser(String id);
 }

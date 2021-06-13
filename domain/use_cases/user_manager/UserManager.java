@@ -3,6 +3,7 @@ package domain.use_cases.user_manager;
 import domain.gateway.UserInterface;
 import domain.requests.AddUserRequest;
 import domain.requests.UpdateUserRequest;
+import domain.use_cases.user_manager.user.*;
 
 public class UserManager extends UserManagerFactory {
     private UserInterface userRepository;
@@ -29,5 +30,10 @@ public class UserManager extends UserManagerFactory {
     @Override
     public ShowUser showUser(String id) {
         return new ShowUser(this.userRepository, id);
+    }
+
+    @Override
+    public DeleteUser deleteUser(String id) {
+        return new DeleteUser(this.userRepository, id);
     }
 }

@@ -1,4 +1,4 @@
-package domain.use_cases.user_manager;
+package domain.use_cases.user_manager.user;
 
 import domain.gateway.UserInterface;
 import domain.presenter.UserPresenterInterface;
