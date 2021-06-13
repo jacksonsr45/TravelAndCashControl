@@ -1,6 +1,7 @@
 package domain.requests;
 
 public class AddProfileRequest {
+    private String userID;
     private String name;
     private String lastName;
     private String identificationDocument;
@@ -8,13 +9,18 @@ public class AddProfileRequest {
     private String celPhone;
     private String email;
 
-    public AddProfileRequest(String name, String lastName, String identificationDocument, String phone, String celPhone, String email) {
+    public AddProfileRequest(String userID, String name, String lastName, String identificationDocument, String phone, String celPhone, String email) {
+        this.userID = userID;
         this.name = name;
         this.lastName = lastName;
         this.identificationDocument = identificationDocument;
         this.phone = phone;
         this.celPhone = celPhone;
         this.email = email;
+    }
+
+    public String getUserID() {
+        return userID;
     }
 
     public String getName() {

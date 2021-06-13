@@ -12,7 +12,7 @@ public class AddProfile extends AddProfileFactory {
 
     @Override
     public void execute(ProfilePresenterInterface presenter) {
-        ProfileEntity entity = new ProfileEntity(this.getId(), this.getName(), this.getLastName(),
+        ProfileEntity entity = new ProfileEntity(this.getId(), this.getUserID(), this.getName(), this.getLastName(),
                 this.getIdentificationDocument(), this.getPhone(), this.getCelPhone(), this.getEmail());
         presenter.present(this.repository.addProfile(entity));
     }

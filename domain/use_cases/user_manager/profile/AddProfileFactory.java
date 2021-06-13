@@ -9,6 +9,7 @@ import java.util.UUID;
 public abstract class AddProfileFactory {
     protected ProfileInterface repository;
     private String id;
+    private String userID;
     private String name;
     private String lastName;
     private String identificationDocument;
@@ -19,6 +20,7 @@ public abstract class AddProfileFactory {
     public AddProfileFactory(ProfileInterface repository, AddProfileRequest request) {
         this.repository = repository;
         this.setId(UUID.randomUUID().toString());
+        this.setUserID(request.getUserID());
         this.setName(request.getName());
         this.setLastName(request.getLastName());
         this.setIdentificationDocument(request.getIdentificationDocument());
@@ -33,6 +35,14 @@ public abstract class AddProfileFactory {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
     public String getName() {

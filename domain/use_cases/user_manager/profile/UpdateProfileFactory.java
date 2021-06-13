@@ -7,6 +7,7 @@ import domain.requests.UpdateProfileRequest;
 public abstract class UpdateProfileFactory {
     protected ProfileInterface repository;
     private String id;
+    private String userID;
     private String name;
     private String lastName;
     private String identificationDocument;
@@ -17,6 +18,7 @@ public abstract class UpdateProfileFactory {
     public UpdateProfileFactory(ProfileInterface repository, UpdateProfileRequest request) {
         this.repository = repository;
         this.setId(request.getId());
+        this.setUserID(request.getUserID());
         this.setName(request.getName());
         this.setLastName(request.getLastName());
         this.setIdentificationDocument(request.getIdentificationDocument());
@@ -31,6 +33,14 @@ public abstract class UpdateProfileFactory {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
     public String getName() {
