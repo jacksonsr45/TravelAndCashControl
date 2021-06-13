@@ -3,7 +3,9 @@ package domain.use_cases.travels_history_manager;
 import domain.requests.AddMonthHistoryRequest;
 import domain.requests.AddTravelHistoryRequest;
 import domain.requests.UpdateMonthHistoryRequest;
+import domain.requests.UpdateTravelHistoryRequest;
 import domain.use_cases.travels_history_manager.history.AddTravelHistory;
+import domain.use_cases.travels_history_manager.history.UpdateTravelHistory;
 import domain.use_cases.travels_history_manager.month.*;
 
 public abstract class TravelsHistoryManagerFactory {
@@ -18,4 +20,6 @@ public abstract class TravelsHistoryManagerFactory {
     public abstract DeleteMonthHistory deleteMonthHistory(String id);
 
     public abstract AddTravelHistory addTravelHistory(AddTravelHistoryRequest request);
+
+    public abstract UpdateTravelHistory updateTravelHistory(UpdateTravelHistoryRequest request);
 }
