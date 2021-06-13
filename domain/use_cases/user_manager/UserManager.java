@@ -1,5 +1,6 @@
 package domain.use_cases.user_manager;
 
+import domain.gateway.AuthInterface;
 import domain.gateway.ProfileInterface;
 import domain.gateway.UserAddressInterface;
 import domain.gateway.UserInterface;
@@ -7,6 +8,9 @@ import domain.requests.*;
 import domain.use_cases.user_manager.address.AddAddress;
 import domain.use_cases.user_manager.address.ShowAddress;
 import domain.use_cases.user_manager.address.UpdateAddress;
+import domain.use_cases.user_manager.auth.AddAuth;
+import domain.use_cases.user_manager.auth.ShowAuth;
+import domain.use_cases.user_manager.auth.UpdateAuth;
 import domain.use_cases.user_manager.profile.AddProfile;
 import domain.use_cases.user_manager.profile.ListProfile;
 import domain.use_cases.user_manager.profile.ShowProfile;
@@ -17,6 +21,7 @@ public class UserManager extends UserManagerFactory {
     private UserInterface userRepository;
     private ProfileInterface profileRepository;
     private UserAddressInterface addressRepository;
+    private AuthInterface authRepository;
 
     public UserManager(UserInterface userRepository) {
         this.userRepository = userRepository;
@@ -49,6 +54,45 @@ public class UserManager extends UserManagerFactory {
         this.userRepository = userRepository;
         this.profileRepository = profileRepository;
         this.addressRepository = addressRepository;
+    }
+
+    public UserManager(AuthInterface authRepository) {
+        this.authRepository = authRepository;
+    }
+
+    public UserManager(ProfileInterface profileRepository, AuthInterface authRepository) {
+        this.profileRepository = profileRepository;
+        this.authRepository = authRepository;
+    }
+
+    public UserManager(UserInterface userRepository, AuthInterface authRepository) {
+        this.userRepository = userRepository;
+        this.authRepository = authRepository;
+    }
+
+    public UserManager(UserInterface userRepository, ProfileInterface profileRepository, AuthInterface authRepository) {
+        this.userRepository = userRepository;
+        this.profileRepository = profileRepository;
+        this.authRepository = authRepository;
+    }
+
+    public UserManager(UserInterface userRepository, UserAddressInterface addressRepository, AuthInterface authRepository) {
+        this.userRepository = userRepository;
+        this.addressRepository = addressRepository;
+        this.authRepository = authRepository;
+    }
+
+    public UserManager(ProfileInterface profileRepository, UserAddressInterface addressRepository, AuthInterface authRepository) {
+        this.profileRepository = profileRepository;
+        this.addressRepository = addressRepository;
+        this.authRepository = authRepository;
+    }
+
+    public UserManager(UserInterface userRepository, ProfileInterface profileRepository, UserAddressInterface addressRepository, AuthInterface authRepository) {
+        this.userRepository = userRepository;
+        this.profileRepository = profileRepository;
+        this.addressRepository = addressRepository;
+        this.authRepository = authRepository;
     }
 
     @Override
@@ -109,5 +153,20 @@ public class UserManager extends UserManagerFactory {
     @Override
     public ShowAddress showAddress(String userID) {
         return new ShowAddress(this.addressRepository, userID);
+    }
+
+    @Override
+    public AddAuth addAuth(AddAuthRequest request) {
+        return new AddAuth(this.authRepository, request);
+    }
+
+    @Override
+    public UpdateAuth updateAuth(UpdateAuthRequest request) {
+        return new UpdateAuth(this.authRepository, request);
+    }
+
+    @Override
+    public ShowAuth showAuth(String userID, String objectiveID) {
+        return new ShowAuth(this.authRepository, userID, objectiveID);
     }
 }
