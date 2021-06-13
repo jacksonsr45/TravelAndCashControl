@@ -18,81 +18,61 @@ import domain.use_cases.user_manager.profile.UpdateProfile;
 import domain.use_cases.user_manager.user.*;
 
 public class UserManager extends UserManagerFactory {
-    private UserInterface userRepository;
-    private ProfileInterface profileRepository;
-    private UserAddressInterface addressRepository;
-    private AuthInterface authRepository;
 
     public UserManager(UserInterface userRepository) {
-        this.userRepository = userRepository;
+        super(userRepository);
     }
 
     public UserManager(ProfileInterface profileRepository) {
-        this.profileRepository = profileRepository;
+        super(profileRepository);
     }
 
     public UserManager(UserInterface userRepository, ProfileInterface profileRepository) {
-        this.userRepository = userRepository;
-        this.profileRepository = profileRepository;
+        super(userRepository, profileRepository);
     }
 
     public UserManager(UserAddressInterface addressRepository) {
-        this.addressRepository = addressRepository;
+        super(addressRepository);
     }
 
     public UserManager(ProfileInterface profileRepository, UserAddressInterface addressRepository) {
-        this.profileRepository = profileRepository;
-        this.addressRepository = addressRepository;
+        super(profileRepository, addressRepository);
     }
 
     public UserManager(UserInterface userRepository, UserAddressInterface addressRepository) {
-        this.userRepository = userRepository;
-        this.addressRepository = addressRepository;
+        super(userRepository, addressRepository);
     }
 
     public UserManager(UserInterface userRepository, ProfileInterface profileRepository, UserAddressInterface addressRepository) {
-        this.userRepository = userRepository;
-        this.profileRepository = profileRepository;
-        this.addressRepository = addressRepository;
+        super(userRepository, profileRepository, addressRepository);
     }
 
     public UserManager(AuthInterface authRepository) {
-        this.authRepository = authRepository;
+        super(authRepository);
     }
 
     public UserManager(ProfileInterface profileRepository, AuthInterface authRepository) {
-        this.profileRepository = profileRepository;
-        this.authRepository = authRepository;
+        super(profileRepository, authRepository);
     }
 
     public UserManager(UserInterface userRepository, AuthInterface authRepository) {
-        this.userRepository = userRepository;
-        this.authRepository = authRepository;
+        super(userRepository, authRepository);
     }
 
     public UserManager(UserInterface userRepository, ProfileInterface profileRepository, AuthInterface authRepository) {
-        this.userRepository = userRepository;
-        this.profileRepository = profileRepository;
-        this.authRepository = authRepository;
+        super(userRepository, profileRepository, authRepository);
     }
 
     public UserManager(UserInterface userRepository, UserAddressInterface addressRepository, AuthInterface authRepository) {
-        this.userRepository = userRepository;
-        this.addressRepository = addressRepository;
-        this.authRepository = authRepository;
+        super(userRepository, addressRepository, authRepository);
     }
 
     public UserManager(ProfileInterface profileRepository, UserAddressInterface addressRepository, AuthInterface authRepository) {
-        this.profileRepository = profileRepository;
-        this.addressRepository = addressRepository;
-        this.authRepository = authRepository;
+        super(profileRepository, addressRepository, authRepository);
     }
 
     public UserManager(UserInterface userRepository, ProfileInterface profileRepository, UserAddressInterface addressRepository, AuthInterface authRepository) {
-        this.userRepository = userRepository;
-        this.profileRepository = profileRepository;
-        this.addressRepository = addressRepository;
-        this.authRepository = authRepository;
+        super(userRepository, profileRepository, addressRepository, authRepository);
     }
 
     @Override
