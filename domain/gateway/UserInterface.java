@@ -5,4 +5,6 @@ import domain.responses.UserResponse;
 
 public interface UserInterface {
     UserResponse addUser(UserEntity entity);
+
+    UserResponse updateUser(UserEntity entity);
 }
