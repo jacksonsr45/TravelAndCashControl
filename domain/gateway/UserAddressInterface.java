@@ -5,4 +5,6 @@ import domain.responses.UserAddressResponse;
 
 public interface UserAddressInterface {
     UserAddressResponse addAddress(UserAddressEntity entity);
+
+    UserAddressResponse updateAddress(UserAddressEntity entity);
 }

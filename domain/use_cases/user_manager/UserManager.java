@@ -5,6 +5,7 @@ import domain.gateway.UserAddressInterface;
 import domain.gateway.UserInterface;
 import domain.requests.*;
 import domain.use_cases.user_manager.address.AddAddress;
+import domain.use_cases.user_manager.address.UpdateAddress;
 import domain.use_cases.user_manager.profile.AddProfile;
 import domain.use_cases.user_manager.profile.ListProfile;
 import domain.use_cases.user_manager.profile.ShowProfile;
@@ -97,5 +98,10 @@ public class UserManager extends UserManagerFactory {
     @Override
     public AddAddress address(AddAddressRequest request) {
         return new AddAddress(this.addressRepository, request);
+    }
+
+    @Override
+    public UpdateAddress updateAddress(UpdateAddressRequest request) {
+        return new UpdateAddress(this.addressRepository, request);
     }
 }
