@@ -25,4 +25,9 @@ public class UserManager extends UserManagerFactory {
     public ListUser listUsers() {
         return new ListUser(this.userRepository);
     }
+
+    @Override
+    public ShowUser showUser(String id) {
+        return new ShowUser(this.userRepository, id);
+    }
 }

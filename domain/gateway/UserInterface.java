@@ -11,4 +11,6 @@ public interface UserInterface {
     UserResponse updateUser(UserEntity entity);
 
     ArrayList<UserResponse> listUsers();
+
+    UserResponse showUser(String id);
 }

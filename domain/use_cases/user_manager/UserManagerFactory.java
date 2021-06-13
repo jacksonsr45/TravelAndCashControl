@@ -9,4 +9,6 @@ public abstract class UserManagerFactory {
     public abstract UpdateUser updateUser(UpdateUserRequest request);
 
     public abstract ListUser listUsers();
+
+    public abstract ShowUser showUser(String id);
 }
