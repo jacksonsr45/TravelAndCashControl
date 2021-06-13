@@ -7,6 +7,7 @@ import domain.requests.UpdateEntityRequest;
 public abstract class UpdateEntityFactory {
     protected EntityManagerInterface repository;
     private String id;
+    private String userID;
     private String type;
     private String name;
     private String description;
@@ -14,6 +15,7 @@ public abstract class UpdateEntityFactory {
     public UpdateEntityFactory(EntityManagerInterface repository, UpdateEntityRequest request) {
         this.repository = repository;
         this.setId(request.getId());
+        this.setUserID(request.getUserID());
         this.setType(request.getType());
         this.setName(request.getName());
         this.setDescription(request.getDescription());
@@ -25,6 +27,14 @@ public abstract class UpdateEntityFactory {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
     public String getType() {

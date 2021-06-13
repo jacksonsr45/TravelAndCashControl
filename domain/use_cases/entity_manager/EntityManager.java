@@ -20,4 +20,9 @@ public class EntityManager extends EntityManagerFactory {
     public UpdateEntity updateEntity(UpdateEntityRequest request) {
         return new UpdateEntity(this.repository, request);
     }
+
+    @Override
+    public ListEntity listEntity(String userID) {
+        return new ListEntity(this.repository, userID);
+    }
 }

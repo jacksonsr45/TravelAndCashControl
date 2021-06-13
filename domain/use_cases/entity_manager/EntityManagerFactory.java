@@ -8,4 +8,6 @@ public abstract class EntityManagerFactory {
     public abstract AddEntity addEntity(AddEntityRequest request);
 
     public abstract UpdateEntity updateEntity(UpdateEntityRequest request);
+
+    public abstract ListEntity listEntity(String userID);
 }

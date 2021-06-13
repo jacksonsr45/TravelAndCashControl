@@ -12,8 +12,8 @@ public class AddEntity extends AddEntityFactory {
 
     @Override
     public void execute(EntityManagerPresenterInterface presenter) {
-        EntityManagerEntity entity = new EntityManagerEntity(this.getId(), this.getType(),
-                this.getName(), this.getDescription());
+        EntityManagerEntity entity = new EntityManagerEntity(this.getId(), this.getUserID(),
+                this.getType(), this.getName(), this.getDescription());
         presenter.present(this.repository.addEntity(entity));
     }
 }
