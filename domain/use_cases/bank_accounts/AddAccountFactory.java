@@ -4,6 +4,8 @@ import domain.gateway.BankAccountInterface;
 import domain.presenter.BankAccountPresenterInterface;
 import domain.requests.AddAccountRequest;
 
+import java.util.UUID;
+
 public abstract class AddAccountFactory {
     protected BankAccountInterface repository;
     private String id;
@@ -14,7 +16,7 @@ public abstract class AddAccountFactory {
 
     public AddAccountFactory(BankAccountInterface repository, AddAccountRequest request) {
         this.repository = repository;
-        this.setId(request.getId());
+        this.setId(UUID.randomUUID().toString());
         this.setBanking(request.getBanking());
         this.setNumber(request.getNumber());
         this.setDescription(request.getDescription());

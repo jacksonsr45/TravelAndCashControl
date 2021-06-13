@@ -2,11 +2,9 @@ package domain.use_cases.user_manager.profile;
 
 import domain.gateway.ProfileInterface;
 import domain.presenter.ProfilePresenterInterface;
-import domain.requests.AddProfileRequest;
+import domain.requests.UpdateProfileRequest;
 
-import java.util.UUID;
-
-public abstract class AddProfileFactory {
+public abstract class UpdateProfileFactory {
     protected ProfileInterface repository;
     private String id;
     private String name;
@@ -16,9 +14,9 @@ public abstract class AddProfileFactory {
     private String celPhone;
     private String email;
 
-    public AddProfileFactory(ProfileInterface repository, AddProfileRequest request) {
+    public UpdateProfileFactory(ProfileInterface repository, UpdateProfileRequest request) {
         this.repository = repository;
-        this.setId(UUID.randomUUID().toString());
+        this.setId(request.getId());
         this.setName(request.getName());
         this.setLastName(request.getLastName());
         this.setIdentificationDocument(request.getIdentificationDocument());

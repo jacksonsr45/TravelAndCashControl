@@ -4,6 +4,8 @@ import domain.gateway.EntityManagerInterface;
 import domain.presenter.EntityManagerPresenterInterface;
 import domain.requests.AddEntityRequest;
 
+import java.util.UUID;
+
 public abstract class AddEntityFactory {
     protected EntityManagerInterface repository;
     private String id;
@@ -14,7 +16,7 @@ public abstract class AddEntityFactory {
 
     public AddEntityFactory(EntityManagerInterface repository, AddEntityRequest request) {
         this.repository = repository;
-        this.setId(request.getId());
+        this.setId(UUID.randomUUID().toString());
         this.setUserID(request.getUserID());
         this.setType(request.getType());
         this.setName(request.getName());

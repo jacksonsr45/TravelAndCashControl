@@ -4,8 +4,10 @@ import domain.gateway.ProfileInterface;
 import domain.gateway.UserInterface;
 import domain.requests.AddProfileRequest;
 import domain.requests.AddUserRequest;
+import domain.requests.UpdateProfileRequest;
 import domain.requests.UpdateUserRequest;
 import domain.use_cases.user_manager.profile.AddProfile;
+import domain.use_cases.user_manager.profile.UpdateProfile;
 import domain.use_cases.user_manager.user.*;
 
 public class UserManager extends UserManagerFactory {
@@ -17,6 +19,11 @@ public class UserManager extends UserManagerFactory {
     }
 
     public UserManager(ProfileInterface profileRepository) {
+        this.profileRepository = profileRepository;
+    }
+
+    public UserManager(UserInterface userRepository, ProfileInterface profileRepository) {
+        this.userRepository = userRepository;
         this.profileRepository = profileRepository;
     }
 
@@ -48,5 +55,10 @@ public class UserManager extends UserManagerFactory {
     @Override
     public AddProfile addProfile(AddProfileRequest request) {
         return new AddProfile(this.profileRepository, request);
+    }
+
+    @Override
+    public UpdateProfile updateProfile(UpdateProfileRequest request) {
+        return new UpdateProfile(this.profileRepository, request);
     }
 }
