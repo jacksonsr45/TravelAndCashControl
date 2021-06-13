@@ -1,13 +1,13 @@
-package domain.use_cases.entity_manager;
+package domain.use_cases.entity_manager.entity;
 
 import domain.gateway.EntityManagerInterface;
 import domain.presenter.EntityManagerPresenterInterface;
 
-public abstract class ShowEntityFactory {
+public abstract class DeleteEntityFactory {
     protected EntityManagerInterface repository;
     private String id;
 
-    public ShowEntityFactory(EntityManagerInterface repository, String id) {
+    public DeleteEntityFactory(EntityManagerInterface repository, String id) {
         this.repository = repository;
         this.id = id;
     }

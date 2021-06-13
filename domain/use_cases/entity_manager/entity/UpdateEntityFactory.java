@@ -1,12 +1,10 @@
-package domain.use_cases.entity_manager;
+package domain.use_cases.entity_manager.entity;
 
 import domain.gateway.EntityManagerInterface;
 import domain.presenter.EntityManagerPresenterInterface;
-import domain.requests.AddEntityRequest;
+import domain.requests.UpdateEntityRequest;
 
-import java.util.UUID;
-
-public abstract class AddEntityFactory {
+public abstract class UpdateEntityFactory {
     protected EntityManagerInterface repository;
     private String id;
     private String userID;
@@ -14,9 +12,9 @@ public abstract class AddEntityFactory {
     private String name;
     private String description;
 
-    public AddEntityFactory(EntityManagerInterface repository, AddEntityRequest request) {
+    public UpdateEntityFactory(EntityManagerInterface repository, UpdateEntityRequest request) {
         this.repository = repository;
-        this.setId(UUID.randomUUID().toString());
+        this.setId(request.getId());
         this.setUserID(request.getUserID());
         this.setType(request.getType());
         this.setName(request.getName());

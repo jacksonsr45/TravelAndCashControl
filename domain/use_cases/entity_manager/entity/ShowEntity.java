@@ -1,4 +1,4 @@
-package domain.use_cases.entity_manager;
+package domain.use_cases.entity_manager.entity;
 
 import domain.gateway.EntityManagerInterface;
 import domain.presenter.EntityManagerPresenterInterface;
