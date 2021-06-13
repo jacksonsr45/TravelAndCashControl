@@ -4,9 +4,9 @@ import domain.requests.*;
 import domain.use_cases.user_manager.address.AddAddress;
 import domain.use_cases.user_manager.address.ShowAddress;
 import domain.use_cases.user_manager.address.UpdateAddress;
-import domain.use_cases.user_manager.auth.AddAuth;
-import domain.use_cases.user_manager.auth.ShowAuth;
-import domain.use_cases.user_manager.auth.UpdateAuth;
+import domain.use_cases.user_manager.role.AddRole;
+import domain.use_cases.user_manager.role.ShowRole;
+import domain.use_cases.user_manager.role.UpdateRole;
 import domain.use_cases.user_manager.profile.AddProfile;
 import domain.use_cases.user_manager.profile.ListProfile;
 import domain.use_cases.user_manager.profile.ShowProfile;
@@ -38,9 +38,9 @@ public abstract class UserManagerFactory {
 
     public abstract ShowAddress showAddress(String userID);
 
-    public abstract AddAuth addAuth(AddAuthRequest request);
+    public abstract AddRole addAuth(AddAuthRequest request);
 
-    public abstract UpdateAuth updateAuth(UpdateAuthRequest request);
+    public abstract UpdateRole updateAuth(UpdateAuthRequest request);
 
-    public abstract ShowAuth showAuth(String userID, String objectiveID);
+    public abstract ShowRole showAuth(String userID, String objectiveID);
 }

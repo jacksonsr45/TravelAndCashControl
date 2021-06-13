@@ -1,10 +1,10 @@
-package domain.use_cases.user_manager.auth;
+package domain.use_cases.user_manager.role;
 
 import domain.gateway.AuthInterface;
 import domain.presenter.AuthPresenterInterface;
 
-public class ShowAuth extends ShowAuthFactory {
-    public ShowAuth(AuthInterface repository, String userID, String objectiveID) {
+public class ShowRole extends ShowRoleFactory {
+    public ShowRole(AuthInterface repository, String userID, String objectiveID) {
         super(repository, userID, objectiveID);
     }
 

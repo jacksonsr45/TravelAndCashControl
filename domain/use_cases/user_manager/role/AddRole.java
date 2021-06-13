@@ -1,12 +1,12 @@
-package domain.use_cases.user_manager.auth;
+package domain.use_cases.user_manager.role;
 
 import domain.entity.AuthEntity;
 import domain.gateway.AuthInterface;
 import domain.presenter.AuthPresenterInterface;
-import domain.requests.UpdateAuthRequest;
+import domain.requests.AddAuthRequest;
 
-public class UpdateAuth extends UpdateAuthFactory {
-    public UpdateAuth(AuthInterface repository, UpdateAuthRequest request) {
+public class AddRole extends AddRoleFactory {
+    public AddRole(AuthInterface repository, AddAuthRequest request) {
         super(repository, request);
     }
 
@@ -14,6 +14,6 @@ public class UpdateAuth extends UpdateAuthFactory {
     public void execute(AuthPresenterInterface presenter) {
         AuthEntity entity = new AuthEntity(this.getId(), this.getUserID(),
                 this.getObjectiveID(), this.getRole());
-        presenter.present(this.repository.updateAuth(entity));
+        presenter.present(this.repository.addAuth(entity));
     }
 }

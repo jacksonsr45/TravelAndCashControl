@@ -1,4 +1,4 @@
-package domain.use_cases.user_manager.auth;
+package domain.use_cases.user_manager.role;
 
 import domain._enum.Role;
 import domain.gateway.AuthInterface;
@@ -7,14 +7,14 @@ import domain.requests.AddAuthRequest;
 
 import java.util.UUID;
 
-public abstract class AddAuthFactory {
+public abstract class AddRoleFactory {
     protected AuthInterface repository;
     private String id;
     private String userID;
     private String objectiveID;
     private Enum<Role> role;
 
-    public AddAuthFactory(AuthInterface repository, AddAuthRequest request) {
+    public AddRoleFactory(AuthInterface repository, AddAuthRequest request) {
         this.repository = repository;
         this.setId(UUID.randomUUID().toString());
         this.setUserID(request.getUserID());

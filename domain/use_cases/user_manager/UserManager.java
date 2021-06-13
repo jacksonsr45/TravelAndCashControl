@@ -8,9 +8,9 @@ import domain.requests.*;
 import domain.use_cases.user_manager.address.AddAddress;
 import domain.use_cases.user_manager.address.ShowAddress;
 import domain.use_cases.user_manager.address.UpdateAddress;
-import domain.use_cases.user_manager.auth.AddAuth;
-import domain.use_cases.user_manager.auth.ShowAuth;
-import domain.use_cases.user_manager.auth.UpdateAuth;
+import domain.use_cases.user_manager.role.AddRole;
+import domain.use_cases.user_manager.role.ShowRole;
+import domain.use_cases.user_manager.role.UpdateRole;
 import domain.use_cases.user_manager.profile.AddProfile;
 import domain.use_cases.user_manager.profile.ListProfile;
 import domain.use_cases.user_manager.profile.ShowProfile;
@@ -156,17 +156,17 @@ public class UserManager extends UserManagerFactory {
     }
 
     @Override
-    public AddAuth addAuth(AddAuthRequest request) {
-        return new AddAuth(this.authRepository, request);
+    public AddRole addAuth(AddAuthRequest request) {
+        return new AddRole(this.authRepository, request);
     }
 
     @Override
-    public UpdateAuth updateAuth(UpdateAuthRequest request) {
-        return new UpdateAuth(this.authRepository, request);
+    public UpdateRole updateAuth(UpdateAuthRequest request) {
+        return new UpdateRole(this.authRepository, request);
     }
 
     @Override
-    public ShowAuth showAuth(String userID, String objectiveID) {
-        return new ShowAuth(this.authRepository, userID, objectiveID);
+    public ShowRole showAuth(String userID, String objectiveID) {
+        return new ShowRole(this.authRepository, userID, objectiveID);
     }
 }

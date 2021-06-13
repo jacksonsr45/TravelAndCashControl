@@ -1,14 +1,14 @@
-package domain.use_cases.user_manager.auth;
+package domain.use_cases.user_manager.role;
 
 import domain.gateway.AuthInterface;
 import domain.presenter.AuthPresenterInterface;
 
-public abstract class ShowAuthFactory {
+public abstract class ShowRoleFactory {
     protected AuthInterface repository;
     private String userID;
     private String objectiveID;
 
-    public ShowAuthFactory(AuthInterface repository, String userID, String objectiveID) {
+    public ShowRoleFactory(AuthInterface repository, String userID, String objectiveID) {
         this.repository = repository;
         this.userID = userID;
         this.objectiveID = objectiveID;
