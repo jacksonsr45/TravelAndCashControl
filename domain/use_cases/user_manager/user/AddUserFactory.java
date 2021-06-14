@@ -4,6 +4,8 @@ import domain.gateway.UserInterface;
 import domain.presenter.UserPresenterInterface;
 import domain.requests.AddUserRequest;
 
+import java.util.UUID;
+
 public abstract class AddUserFactory {
     protected UserInterface repository;
     private String id;
@@ -13,7 +15,7 @@ public abstract class AddUserFactory {
 
     public AddUserFactory(UserInterface userRepository, AddUserRequest request) {
         this.repository = userRepository;
-        this.setId(request.getId());
+        this.setId(UUID.randomUUID().toString());
         this.setUsername(request.getUsername());
         this.setPassword(request.getPassword());
         this.setStatus(request.getStatus());

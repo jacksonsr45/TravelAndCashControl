@@ -8,6 +8,7 @@ import domain.requests.*;
 import domain.use_cases.user_manager.address.AddAddress;
 import domain.use_cases.user_manager.address.ShowAddress;
 import domain.use_cases.user_manager.address.UpdateAddress;
+import domain.use_cases.user_manager.auth.Login;
 import domain.use_cases.user_manager.role.AddRole;
 import domain.use_cases.user_manager.role.ShowRole;
 import domain.use_cases.user_manager.role.UpdateRole;
@@ -148,5 +149,10 @@ public class UserManager extends UserManagerFactory {
     @Override
     public ShowRole showAuth(String userID, String objectiveID) {
         return new ShowRole(this.authRepository, userID, objectiveID);
+    }
+
+    @Override
+    public Login login(String username, String password) {
+        return new Login( userRepository,sectionRepository, username, password);
     }
 }

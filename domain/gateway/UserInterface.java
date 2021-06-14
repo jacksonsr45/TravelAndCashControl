@@ -15,4 +15,6 @@ public interface UserInterface {
     UserResponse showUser(String id);
 
     Boolean deleteUser(String id);
+
+    UserResponse login(String username, String password);
 }
