@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="travels_layout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" styleClass="content" stylesheets="@../styles/travels.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jacksonsr45.main.user_interface.controller.TravelsScreenController">
+    <children>
+        <HBox fx:id="header" alignment="CENTER_RIGHT" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label contentDisplay="CENTER" text="Home" textFill="#c2c2c2">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <Label fx:id="button_min" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#minimize_stage" prefHeight="34.0" prefWidth="34.0" styleClass="min-btn">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="MINUS" glyphStyle="-fx-fill:white" size="1.3em" />
+                    </graphic>
+                </Label>
+                <Label fx:id="button_maximize" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#maximize_app" prefHeight="34.0" prefWidth="34.0" styleClass="expan-btn">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="EXPAND" glyphStyle="-fx-fill:white" size="1.3em" />
+                    </graphic>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label fx:id="button_close" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#logout_app" prefHeight="34.0" prefWidth="34.0" styleClass="close-btn">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="CLOSE" glyphStyle="-fx-fill:white" size="1.3em" />
+                    </graphic>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="53.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="55.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="HOME" glyphStyle="-fx-fill:#ADADAD" size="1.5em" />
+                    </graphic>
+                </Label>
+                <Label prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </Label>
+            </children>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="115.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="115.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="BUILDING" glyphStyle="-fx-fill:#ADADAD" size="1.5em" />
+                    </graphic>
+                </Label>
+                <Label prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Empressas" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </Label>
+            </children>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="175.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="USERS" glyphStyle="-fx-fill:#ADADAD" size="1.5em" />
+                    </graphic>
+                </Label>
+                <Label prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: transpare transparent;" text="Usuarios" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </Label>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="235.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="235.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="BANK" glyphStyle="-fx-fill:#ADADAD" size="1.5em" />
+                    </graphic>
+                </Label>
+                <Label prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Contas" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </Label>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="295.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="295.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="BUS" glyphStyle="-fx-fill:#ADADAD" size="1.5em" />
+                    </graphic>
+                </Label>
+                <Label prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Viagens" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </Label>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="355.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="355.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="WRENCH" glyphStyle="-fx-fill:#ADADAD" size="1.5em" />
+                    </graphic>
+                </Label>
+                <Label prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Configuração" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </Label>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="646.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="EYE" glyphStyle="-fx-fill:#ADADAD" size="1.5em" />
+                    </graphic>
+                </Label>
+                <Label prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Sobre" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </Label>
+            </children>
+        </HBox>
+        <AnchorPane fx:id="pane_travels" layoutX="6.0" layoutY="45.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="34.0" />
+    </children>
+</AnchorPane>
