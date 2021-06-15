@@ -40,6 +40,36 @@ public class EntitiesScreenController implements Initializable {
         Window.handleMaximized();
     }
 
+    @FXML
+    public void handle_accounts(MouseEvent event) {
+        Main.handleView(R.id.accounts_page);
+    }
+
+    @FXML
+    public void handle_home(MouseEvent event) {
+        Main.handleView(R.id.home_page);
+    }
+
+    @FXML
+    public void handle_travels(MouseEvent event) {
+        Main.handleView(R.id.travels_page);
+    }
+
+    @FXML
+    public void handle_users(MouseEvent event) {
+        Main.handleView(R.id.users_page);
+    }
+
+    @FXML
+    public void handle_config() {
+
+    }
+
+    @FXML
+    public void handle_about() {
+
+    }
+
     private void handlePageLogin() {
         if (Main.stage.isMaximized()) {
             Window.handleMaximized();

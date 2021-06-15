@@ -14,7 +14,7 @@
             <children>
                 <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                     <children>
-                        <Label contentDisplay="CENTER" text="Home" textFill="#c2c2c2">
+                        <Label contentDisplay="CENTER" text="Viagens" textFill="#c2c2c2">
                             <HBox.margin>
                                 <Insets left="20.0" />
                             </HBox.margin>
@@ -56,7 +56,7 @@
                 </Label>
             </children>
         </HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="53.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="55.0">
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="53.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handle_home" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="55.0">
             <children>
                 <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
                     <graphic>
@@ -76,7 +76,7 @@
                 <Cursor fx:constant="DEFAULT" />
             </cursor>
         </HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="115.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="115.0">
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="115.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handle_entities" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="115.0">
             <children>
                 <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
                     <graphic>
@@ -96,7 +96,7 @@
                 <Cursor fx:constant="DEFAULT" />
             </cursor>
         </HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="175.0">
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handle_users" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="175.0">
             <children>
                 <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
                     <graphic>
@@ -113,7 +113,7 @@
                 </Label>
             </children>
         </HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="235.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="235.0">
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="235.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handle_accounts" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="235.0">
             <children>
                 <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
                     <graphic>
@@ -147,7 +147,7 @@
                 </Label>
             </children>
         </HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="355.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="355.0">
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="355.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handle_config" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="355.0">
             <children>
                 <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
                     <graphic>
@@ -164,7 +164,7 @@
                 </Label>
             </children>
         </HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="646.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="646.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handle_about" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
             <children>
                 <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
                     <graphic>

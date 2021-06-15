@@ -76,7 +76,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </HBox>
-      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="115.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="115.0">
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="115.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handle_entities" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="115.0">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
                <graphic>
@@ -96,7 +96,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </HBox>
-      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="175.0">
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handle_users" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="175.0">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
                <graphic>
@@ -113,7 +113,7 @@
             </Label>
          </children>
       </HBox>
-      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="235.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="235.0">
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="235.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handle_accounts" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="235.0">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
                <graphic>
@@ -130,7 +130,7 @@
             </Label>
          </children>
       </HBox>
-      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="295.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="295.0">
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="295.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handle_travels" prefHeight="50.0" prefWidth="220.0" styleClass="menu-btn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="295.0">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
                <graphic>
@@ -154,7 +154,7 @@
                   <FontAwesomeIconView glyphName="WRENCH" glyphStyle="-fx-fill:#ADADAD" size="1.5em" />
                </graphic>
             </Label>
-            <Label prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Configuração" textFill="WHITE">
+            <Label onMouseClicked="#handle_config" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Configuração" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
@@ -171,7 +171,7 @@
                   <FontAwesomeIconView glyphName="EYE" glyphStyle="-fx-fill:#ADADAD" size="1.5em" />
                </graphic>
             </Label>
-            <Label prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Sobre" textFill="WHITE">
+            <Label onMouseClicked="#handle_about" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Sobre" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>

@@ -36,6 +36,36 @@ public class HomeScreenController implements Initializable {
     }
 
     @FXML
+    public void handle_accounts(MouseEvent event) {
+        Main.handleView(R.id.accounts_page);
+    }
+
+    @FXML
+    public void handle_entities(MouseEvent event) {
+        Main.handleView(R.id.entities_page);
+    }
+
+    @FXML
+    public void handle_travels(MouseEvent event) {
+        Main.handleView(R.id.travels_page);
+    }
+
+    @FXML
+    public void handle_users(MouseEvent event) {
+        Main.handleView(R.id.users_page);
+    }
+
+    @FXML
+    public void handle_config() {
+
+    }
+
+    @FXML
+    public void handle_about() {
+
+    }
+
+    @FXML
     public void maximize_app(MouseEvent event) {
         Window.handleMaximized();
     }

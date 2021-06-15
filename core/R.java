@@ -18,7 +18,6 @@ public class R {
         public static final String screen_users = "res/layouts/screen_users.fxml";
     }
     public static class strings {
-        public static final String TITLE_LOGIN = "LOGIN";
     }
     public static class dimens {
     }
