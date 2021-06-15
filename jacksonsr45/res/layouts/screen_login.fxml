@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="285.0" prefWidth="500.0" styleClass="content" stylesheets="@../styles/login.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jacksonsr45.main.user_interface.controller.LoginScreenController">
+<AnchorPane fx:id="login_layout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="285.0" prefWidth="500.0" styleClass="content" stylesheets="@../styles/login.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jacksonsr45.main.user_interface.controller.LoginScreenController">
    <children>
       <HBox fx:id="header" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="500.0">
          <padding>
