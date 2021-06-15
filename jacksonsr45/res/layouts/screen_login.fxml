@@ -1,14 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="jacksonsr45.main.user_interface.controller.LoginScreenController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="285.0" prefWidth="500.0" styleClass="content" stylesheets="@../styles/login.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jacksonsr45.main.user_interface.controller.LoginScreenController">
+   <children>
+      <HBox fx:id="header" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="500.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="LOGIN" textFill="#c2c2c2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Label fx:id="button_min" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#minimize_stage" prefHeight="30.0" prefWidth="30.0" styleClass="min-btn">
+               <graphic>
+                  <FontAwesomeIconView glyphName="MINUS" glyphStyle="-fx-fill:white" size="1.3em" />
+               </graphic>
+            </Label>
+            <Label fx:id="button_close" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#close_app" prefHeight="30.0" prefWidth="30.0" styleClass="close-btn">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CLOSE" glyphStyle="-fx-fill:white" size="1.3em" />
+               </graphic>
+            </Label>
+         </children>
+      </HBox>
+      <Pane fx:id="panel_login" layoutY="40.0" prefHeight="250.0" prefWidth="500.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="125.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #363b41;">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="USER" glyphStyle="-fx-fill:#ADADAD" size="1.5em" />
+                     </graphic>
+                  </Label>
+                  <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" promptText="Nome de usuario" styleClass="text-field" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="125.0" layoutY="88.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #363b41;">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="LOCK" glyphStyle="-fx-fill:#ADADAD" size="1.5em" />
+                     </graphic>
+                  </Label>
+                  <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" promptText="Password" styleClass="text-field" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <JFXButton buttonType="RAISED" layoutX="125.0" layoutY="149.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#handle_login" prefHeight="45.0" prefWidth="250.0" ripplerFill="WHITE" styleClass="btn-login" text="LOGAR">
+               <font>
+                  <Font name="Ubuntu Light" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>

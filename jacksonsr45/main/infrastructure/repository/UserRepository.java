@@ -31,4 +31,9 @@ public class UserRepository implements UserInterface {
     public Boolean deleteUser(String id) {
         return null;
     }
+
+    @Override
+    public UserResponse login(String username, String password) {
+        return null;
+    }
 }
