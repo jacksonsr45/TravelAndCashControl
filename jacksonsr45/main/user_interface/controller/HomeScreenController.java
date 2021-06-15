@@ -32,13 +32,19 @@ public class HomeScreenController implements Initializable {
 
     @FXML
     public void logout_app(MouseEvent event) {
-        Window.handleMaximized();
-        Main.handleView(R.id.login_page);
-        Window.center();
+        this.handlePageLogin();
     }
 
     @FXML
     public void maximize_app(MouseEvent event) {
         Window.handleMaximized();
+    }
+
+    private void handlePageLogin() {
+        if (Main.stage.isMaximized()) {
+            Window.handleMaximized();
+        }
+        Main.handleView(R.id.login_page);
+        Window.center();
     }
 }
