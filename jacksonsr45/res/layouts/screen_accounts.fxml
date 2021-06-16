@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="accounts_layout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" styleClass="content" stylesheets="@../styles/accounts.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jacksonsr45.main.user_interface.controller.AccountsScreenController">
+<AnchorPane fx:id="accounts_layout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" styleClass="parent" stylesheets="@../values/stylesheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jacksonsr45.main.user_interface.controller.AccountsScreenController">
     <children>
         <HBox fx:id="header" alignment="CENTER_RIGHT" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -103,7 +103,7 @@
                         <FontAwesomeIconView glyphName="USERS" glyphStyle="-fx-fill:#ADADAD" size="1.5em" />
                     </graphic>
                 </Label>
-                <Label prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: transpare transparent;" text="Usuarios" textFill="WHITE">
+                <Label prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Usuarios" textFill="WHITE">
                     <font>
                         <Font size="15.0" />
                     </font>

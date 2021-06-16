@@ -39,7 +39,7 @@ public class LoginScreenController implements Initializable {
     }
 
     @FXML
-    public void handle_login(ActionEvent event) throws IOException {
+    public void handle_login(ActionEvent event) {
         Main.handleView(R.id.home_page);
         Window.center();
     }

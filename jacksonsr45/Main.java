@@ -46,21 +46,32 @@ public class Main extends Application {
     private void initScenes() throws IOException {
         Parent root_login = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(R.resources.screen_login)));
         login_page = new Scene(root_login);
+        this.setStylesheets(login_page);
 
         Parent root_home = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(R.resources.screen_home)));
         home_page = new Scene(root_home);
+        this.setStylesheets(home_page);
 
         Parent root_accounts = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(R.resources.screen_accounts)));
         accounts_page = new Scene(root_accounts);
+        this.setStylesheets(accounts_page);
 
         Parent root_entities = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(R.resources.screen_entities)));
         entities_page = new Scene(root_entities);
+        this.setStylesheets(entities_page);
 
         Parent root_travels = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(R.resources.screen_travels)));
         travels_page = new Scene(root_travels);
+        this.setStylesheets(travels_page);
 
         Parent root_users = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(R.resources.screen_users)));
         users_page = new Scene(root_users);
+        this.setStylesheets(users_page);
+    }
+
+
+    private void setStylesheets(Scene scene) {
+        scene.getStylesheets().add(getClass().getResource("res/values/stylesheet.css").toExternalForm());
     }
 
 

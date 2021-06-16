@@ -1,4 +1,4 @@
-.content {
+.parent {
     -fx-background-color: #303138;
 }
 .close-btn {
@@ -20,6 +20,25 @@
 }
 .min-btn:hover {
     -fx-background-color: #171717;
+    -fx-cursor: HAND;
+}
+.text-field {
+    -fx-background-color: #3B4148;
+    -fx-background-radius: 0px;
+    -fx-prompt-text-fill: #ADADAD;
+    -fx-text-fill: #ffffff;
+}
+.text-field:focused {
+    -fx-background-color: #363b41;
+    -fx-background-radius: 0px;
+    -fx-prompt-text-fill: #ADADAD;
+    -fx-text-fill: #ffffff;
+}
+.btn-login {
+    -fx-background-color: #EA4C88;
+    -fx-text-fill: #ffffff;
+}
+.btn-login:hover {
     -fx-cursor: HAND;
 }
 .menu-btn {
